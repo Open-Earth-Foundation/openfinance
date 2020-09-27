@@ -1,0 +1,16 @@
+# daemon params
+port: 8080
+insecure: true
+mainnet: false
+
+# mainnet params
+platformemail: platform@openx.com
+platformpass: topsecretpassword
+kycapikey: topsecret
+
+# testnet params
+# rename this to config.yaml before starting
+algodAddress: fillthis
+algodToken: fillthis
+kmdAddress: fillthis
+kmdToken: fillthis
