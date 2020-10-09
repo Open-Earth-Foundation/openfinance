@@ -62,7 +62,9 @@ Make sure you have the necessary permissions to write to `$HOME`. Start openx us
 
 ## Installing IPFS
 
-ipfs is used by some parts of the program to store data that needs to be publicly verified. Download a release from https://github.com/ipfs/go-ipfs/releases and run install.sh. If you face conflicts between multiple ipfs versions, you might need to run [fs-repo-migrations](https://github.com/ipfs/fs-repo-migrations/blob/master/run.md) to migrate to the newer version. If you don't have anything worth storing, you can delete the ipfs home directory and run `ipfs init` again (this will delete the data stored in ipfs prior to deletion)
+#### ipfs is used by some parts of the program to store data that needs to be publicly verified. 
+
+Download a release from https://github.com/ipfs/go-ipfs/releases and run install.sh. If you face conflicts between multiple ipfs versions, you might need to run [fs-repo-migrations](https://github.com/ipfs/fs-repo-migrations/blob/master/run.md) to migrate to the newer version. If you don't have anything worth storing, you can delete the ipfs home directory and run `ipfs init` again (this will delete the data stored in ipfs prior to deletion)
 
 You need to keep your peer key (`ipfs.key` usually) in a safe place for future reference. Start ipfs using `ipfs daemon` and you can test it by creating a file `test.txt` and run `ipfs add test.txt`. The resultant hash can be decrypted using `curl "http://127.0.0.1:8080/ipfs/hash"` where `127:0.0.1:8080` is the endpoint of the ipfs server. If you need more help on setting up ipfs, you can also refer to [this helpful tutorial](https://michalzalecki.com/set-up-ipfs-node-on-the-server/).
 
