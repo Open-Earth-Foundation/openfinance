@@ -30,3 +30,7 @@ require (
 	github.com/stretchr/objx v0.2.0 // indirect
 	gopkg.in/ini.v1 v1.57.0 // indirect
 )
+
+replace (
+	bitbucket.org/ww/goautoneg => github.com/munnerz/goautoneg v0.0.0-20120707110453-a547fc61f48d
+)
