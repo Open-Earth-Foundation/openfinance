@@ -108,14 +108,16 @@ func ValidatePwhash(name string, pwhash string) (User, error) {
 	}
 
 	for _, user := range users {
-		if !user.Conf {
-			continue
-		}
+		println(user.Username, user.Pwhash)
+		println(name, pwhash)
+		// if !user.Conf {
+		// 	continue
+		// }
 		if user.Username == name && user.Pwhash == pwhash {
 			return user, nil
 		}
 	}
-	return dummy, errors.New("could not find user with requested credentials")
+	return dummy, errors.New("could not find user with requested credentials 119")
 }
 
 // ValidatePwhashReg validates a username / pwhash combination during registration
@@ -131,7 +133,7 @@ func ValidatePwhashReg(name string, pwhash string) (User, error) {
 			return user, nil
 		}
 	}
-	return dummy, errors.New("could not find user with requested credentials")
+	return dummy, errors.New("could not find user with requested credentials 135")
 }
 
 // ValidateAccessToken validates a username / accessToken combination
@@ -148,9 +150,9 @@ func ValidateAccessToken(name string, accessToken string) (User, error) {
 	}
 
 	for _, user := range users {
-		if !user.Conf {
-			continue
-		}
+		// if !user.Conf {
+		// 	continue
+		// }
 		if user.Username == name {
 			dummy = user
 			break
@@ -164,5 +166,5 @@ func ValidateAccessToken(name string, accessToken string) (User, error) {
 		}
 	}
 
-	return dummy, errors.New("could not find user with requested credentials")
+	return dummy, errors.New("could not find user with requested credentials 168")
 }
